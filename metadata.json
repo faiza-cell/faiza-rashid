@@ -1,0 +1,6 @@
+{
+  "name": "DESI DRIP - Luxury Pakistani Clothing",
+  "description": "Discover timeless Pakistani & casual wear designed for your everyday elegance. Official DESI DRIP clothing brand store.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

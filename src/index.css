@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-script: 'Caveat', cursive;
+
+  --color-espresso: #1B0E0A;
+  --color-deep-brown: #2A120D;
+  --color-maroon: #651B17;
+  --color-terracotta: #C96852;
+  --color-soft-peach: #D9826D;
+  --color-cream: #F7EFE5;
+  --color-ivory: #FBF6EE;
+  --color-beige: #E8D8C8;
+  --color-gold: #C59A70;
+  --color-dark-text: #21130F;
+  --color-light-text: #F8EEE5;
+}
+
+:root {
+  --bg-primary: #1B0E0A;
+  --text-primary: #21130F;
+  --accent-terracotta: #C96852;
+  --accent-gold: #C59A70;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #1B0E0A;
+  color: #21130F;
+}
+
+.font-serif-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script-hand {
+  font-family: 'Caveat', cursive;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1B0E0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #651B17;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C96852;
+}
+
+/* Hero Section Animations */
+@keyframes heroBgReveal {
+  from {
+    opacity: 0.65;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes heroFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-bg {
+  animation: heroBgReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-1 {
+  animation: heroFadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+  opacity: 0;
+}
+.animate-hero-2 {
+  animation: heroFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+  opacity: 0;
+}
+.animate-hero-3 {
+  animation: heroFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+  opacity: 0;
+}
+.animate-hero-4 {
+  animation: heroFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-bg,
+  .animate-hero-1,
+  .animate-hero-2,
+  .animate-hero-3,
+  .animate-hero-4 {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
